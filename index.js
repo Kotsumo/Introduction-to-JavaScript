@@ -71,10 +71,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
+function multiply(num1, num2)
+{
     /*add your code here*/
     return num1 * num2;
-  }
+}
   multiply(10, 5);
 
 
@@ -185,54 +186,38 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-const ai = Math.floor(Math.random() * 3);
+let ai = Math.floor(Math.random() * 3);
   function game(user, computer){
-    /*add your code here*/
 
-    /*
-    0 = rock
-    1 = paper
-    2 = scissor
-    */
-    if(user === 0.333 && computer === ai)
-    {
-      console.log('tie');
+    let choice = null;
+    /*add your code here*/
+    if(computer === 0){
+      choice = 'rock'
+    }else if (computer === 1) {
+      choice = 'paper'
+    }else if (computer == 2) {
+      choice = 'scissors'
+    }else{
+      choice = computer
     }
-    else if(user === 0 && computer === 1)
-    {
-      console.log('lose');
-    }
-    else if(user === 0 && computer === 2)
-    {
-      console.log('win');
-    }
-    else if(user === 1 && computer === 0)
-    {
-      console.log('lose');
-    }
-    else if(user === 1 && computer === 1)
-    {
-      console.log('tie');
-    }
-    else if(user === 1 && computer === 2)
-    {
-      console.log('lose');
-    }
-    else if(user === 2 && computer === 0)
-    {
-      console.log('scissors vs rock, you lose!');
-    }
-    else if(user === 2 && computer === 1)
-    {
-      console.log('scissors vs paper, you win!');
-    }
-    else if(user === 2 && computer === 2)
-    {
-      console.log('scissors vs scissors, tie!');
+
+    if (user === choice) {
+      return "it's a tie"
+    }else if (user === 'rock' && choice === 'paper'){
+      return 'you lose!'
+    }else if (user === 'rock' && choice === 'scissors'){
+      return 'you win!'
+    }else if (user === 'paper' && choice === 'rock'){
+      return 'you win!'
+    }else if (user === 'paper' && choice === 'scissors'){
+      return 'you lose!'
+    }else if (user === 'scissors' && choice === 'paper'){
+      return 'you win!'
+    }else if (user === 'scissors' && choice === 'rock'){
+      return 'you lose!'
     }
   }
 
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -261,8 +246,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm){
     /*add your code here*/
+    let feet = cm / 30.48;
+    return feet;
   }
  
 
